@@ -1,5 +1,6 @@
 package controller;
 
+import java.awt.Component;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
@@ -52,7 +53,7 @@ public class Player {
 	 */
 	private Player otherPlayer;
 	
-	public Player(int _direction, boolean requestName) {
+	public Player(int _direction, boolean requestName, Component frame) {
 		direction = _direction;
 		cameraDirection = (direction == 1) ? 3.1415f * 3 / 2 : 3.1415f / 2;
 		
@@ -60,7 +61,7 @@ public class Player {
 		capturedPieces = new ArrayList<ChessPiece>();
 		if (requestName) {
 			String playernum = (direction == 1) ? "1" : "2";
-			playerName = JOptionPane.showInputDialog("Enter Player " + playernum + "'s name");
+			playerName = JOptionPane.showInputDialog(frame, "Enter Player " + playernum + "'s name");
 		}
 	}
 	

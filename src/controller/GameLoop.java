@@ -6,6 +6,7 @@ import java.util.Stack;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import javax.media.opengl.awt.GLCanvas;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import model.ChessMove;
@@ -72,10 +73,10 @@ public class GameLoop implements Runnable {
 	 * 
 	 * @param _canvas The opengl window created
 	 */
-	public GameLoop(GLCanvas _canvas) {
+	public GameLoop(GLCanvas _canvas, JFrame frame) {
 		canvas = _canvas;
-		player1 = new Player(1, true);
-		player2 = new Player(-1, true);
+		player1 = new Player(1, true, frame);
+		player2 = new Player(-1, true, frame);
 		player1.setOtherPlayer(player2);
 		player2.setOtherPlayer(player1);
 	}

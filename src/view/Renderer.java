@@ -130,6 +130,7 @@ public class Renderer implements GLEventListener {
         ClassLoader classLoader = getClass().getClassLoader();
         File texDir = new File(classLoader.getResource("Textures").getPath());
         File modDir = new File(classLoader.getResource("Models").getPath());
+        
         try {
 			AssetLoader.getInstance().loadTexturesFromDirectory(gl, texDir);
 			AssetLoader.getInstance().loadModelsFromDirectory(gl, modDir);

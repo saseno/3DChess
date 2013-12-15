@@ -40,8 +40,8 @@ public class TestMoves {
 	
 	@Before
 	public void setup() {
-		player1 = new Player(1, false);
-		player2 = new Player(-1, false);
+		player1 = new Player(1, false, null);
+		player2 = new Player(-1, false, null);
 		player1.setOtherPlayer(player2);
 		player2.setOtherPlayer(player1);;
 	}

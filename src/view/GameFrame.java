@@ -35,16 +35,17 @@ public class GameFrame extends JFrame {
     	//create opengl view
     	canvas = new GLCanvas(capabilities);
     	
+    	setSize(900, 600);
+		setVisible(true);
+		setTitle("Chess!");
+    	setJMenuBar(new GameMainMenu(this, gameController));
+		add(canvas);
+		
     	//create gameloop
-    	gameController = new GameLoop(canvas);
+    	gameController = new GameLoop(canvas, this);
     	Renderer renderer = new Renderer(gameController);
     	canvas.addGLEventListener(renderer);
     	
-    	setTitle("Chess!");
-    	setJMenuBar(new GameMainMenu(this, gameController));
-		add(canvas);
-		setSize(900, 600);
-		setVisible(true);
 		
 		InputHandler in = new InputHandler(gameController, renderer);
 		canvas.addKeyListener(in);

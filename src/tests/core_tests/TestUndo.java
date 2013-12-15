@@ -1,6 +1,6 @@
 package tests.core_tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.awt.Point;
 
@@ -23,8 +23,8 @@ public class TestUndo {
 	
 	@Before
 	public void setup() {
-		player1 = new Player(1, false);
-		player2 = new Player(-1, false);
+		player1 = new Player(1, false, null);
+		player2 = new Player(-1, false, null);
 		player1.setOtherPlayer(player2);
 		player2.setOtherPlayer(player1);;
 	}
