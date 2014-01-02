@@ -2,8 +2,8 @@ package view.loaders;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -78,14 +78,18 @@ public class AssetLoader {
 	 * @param gl
 	 * @param file the directory of all the models
 	 */
-	public void loadModelsFromDirectory(GL2 gl, File dir) {
+	public void loadChessModels(GL2 gl) {
 		try {
-			for (File file : dir.listFiles()) { //Loop through all the files 
-				if (file.isHidden()) //if its hidden...
-					continue;
+			String[] modelNames = {
+					"Bishop.mdl", "Chancellor.mdl", "King.mdl", "Knight.mdl",
+					"LameQueen.mdl", "Pawn.mdl", "Queen.mdl", "Rook.mdl"
+				};
+			ClassLoader cl = getClass().getClassLoader();
+			for (String file : modelNames) { //Loop through all the files 
 				
 				//create a file reader
-				BufferedReader reader = new BufferedReader(new FileReader(file));
+				BufferedReader reader = new BufferedReader(
+						new InputStreamReader(cl.getResourceAsStream("view/Models/" + file)));
 				
 				//the first line is the size
 				int size = Integer.parseInt(reader.readLine());
@@ -100,9 +104,8 @@ public class AssetLoader {
 				}
 			
 				buffer.rewind();
-				String name = file.getName().split("\\.")[0]; //get the name with no file ending
 				Model model = new Model(gl, GL2.GL_QUADS, buffer, size, null);
-				models.put(name, model);
+				models.put(file.split("\\.")[0], model);
 				reader.close();
 			}
 		} catch (IOException ex) { ex.printStackTrace(); }
@@ -138,18 +141,16 @@ public class AssetLoader {
 	 * @throws IOException 
 	 * @throws GLException 
 	 */
-	public void loadTexturesFromDirectory(GL2 gl, File dir) throws GLException, IOException {
-		for (File file : dir.listFiles())  { //loop through all images
-			if (file.isHidden()) //if its hidden...
-				continue;
-			
-			Texture tex = TextureIO.newTexture(file, true);
+	public void loadChessTextures(GL2 gl) throws GLException, IOException {
+		ClassLoader cl = getClass().getClassLoader();
+		String[] texturesNames = { "Black.png", "BlackWhite.png", "Green.png", "White.png" };
+		for (String file : texturesNames)  { //loop through all images
+			Texture tex = TextureIO.newTexture(cl.getResourceAsStream("view/Textures/" + file), true, TextureIO.PNG);
 			tex.setTexParameteri(gl, GL2.GL_TEXTURE_WRAP_S, GL2.GL_REPEAT);
 		    tex.setTexParameteri(gl, GL2.GL_TEXTURE_WRAP_T, GL2.GL_REPEAT);
 		    tex.enable(gl);
 		    tex.bind(gl);
-		    String name = file.getName().split("\\.")[0];
-			textures.put(name, tex);
+			textures.put(file.split("\\.")[0], tex);
 		}
 	}
 	

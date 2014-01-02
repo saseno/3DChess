@@ -1,6 +1,5 @@
 package view;
 
-import java.io.File;
 import java.io.IOException;
 
 import javax.media.opengl.GL2;
@@ -126,19 +125,15 @@ public class Renderer implements GLEventListener {
          * http://www.turbosquid.com/3d-models/chess-set-3ds-free/654392
          * 
         */
-        //Load all the models/textures now that we have an opengl context
-        ClassLoader classLoader = getClass().getClassLoader();
-        File texDir = new File(classLoader.getResource("Textures").getPath());
-        File modDir = new File(classLoader.getResource("Models").getPath());
         
         try {
-			AssetLoader.getInstance().loadTexturesFromDirectory(gl, texDir);
-			AssetLoader.getInstance().loadModelsFromDirectory(gl, modDir);
-		} catch (GLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+        	AssetLoader.getInstance().loadChessTextures(gl);
+        	AssetLoader.getInstance().loadChessModels(gl);
+        } catch (GLException e) {
+        	e.printStackTrace();
+        } catch (IOException e) {
+        	e.printStackTrace();
+        }
         
         isInitilized = true;
         System.out.println("DONE INIT");

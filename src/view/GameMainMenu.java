@@ -21,6 +21,11 @@ import controller.Player;
  */
 public class GameMainMenu extends JMenuBar implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2675401737436931613L;
+
 	private GameLoop gameController;
 	
 	private GameFrame gameFrame;

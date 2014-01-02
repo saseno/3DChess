@@ -21,6 +21,11 @@ import controller.InputHandler;
  */
 public class GameFrame extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3248983927774474631L;
+	
 	private GameLoop gameController;
 	private GLCanvas canvas;
 	
