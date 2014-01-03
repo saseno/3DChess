@@ -1,0 +1,89 @@
+\hypertarget{classcontroller_1_1util_1_1_animation}{\section{controller.\-util.\-Animation Class Reference}
+\label{classcontroller_1_1util_1_1_animation}\index{controller.\-util.\-Animation@{controller.\-util.\-Animation}}
+}
+Inheritance diagram for controller.\-util.\-Animation\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcontroller_1_1util_1_1_animation}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \hyperlink{interfacecontroller_1_1util_1_1_animation_1_1_animatable}{Animatable}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcontroller_1_1util_1_1_animation_a43abd777d3c714dd526fca7a3ffde346}{Animation} (\hyperlink{interfacecontroller_1_1util_1_1_animation_1_1_animatable}{Animatable} \-\_\-object, String \-\_\-fieled\-Name, float \-\_\-start\-Val, float \-\_\-end\-Val, float \-\_\-time)
+\item 
+boolean \hyperlink{classcontroller_1_1util_1_1_animation_a4f4b2dfafe34749665dde788be0ca3d4}{step\-Animation} (float \-\_\-delta\-Time)
+\item 
+\hypertarget{classcontroller_1_1util_1_1_animation_ac628a796ed83e7d5594d61f27f29b5de}{int {\bfseries compare\-To} (\hyperlink{classcontroller_1_1util_1_1_animation}{Animation} arg0)}\label{classcontroller_1_1util_1_1_animation_ac628a796ed83e7d5594d61f27f29b5de}
+
+\item 
+\hypertarget{classcontroller_1_1util_1_1_animation_afba5245ec966e222812ebfa7f473688e}{boolean {\bfseries equals} (Object arg0)}\label{classcontroller_1_1util_1_1_animation_afba5245ec966e222812ebfa7f473688e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a basic linear interpolation animation, which is updated by a delta\-\_\-t in the gameloop. This class works by calling the set\-Value() method of the \hyperlink{interfacecontroller_1_1util_1_1_animation_1_1_animatable}{Animatable} object passed in
+
+\begin{DoxyAuthor}{Author}
+Nicholas 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcontroller_1_1util_1_1_animation_a43abd777d3c714dd526fca7a3ffde346}{\index{controller\-::util\-::\-Animation@{controller\-::util\-::\-Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!controller::util::Animation@{controller\-::util\-::\-Animation}}
+\subsubsection[{Animation}]{\setlength{\rightskip}{0pt plus 5cm}controller.\-util.\-Animation.\-Animation (
+\begin{DoxyParamCaption}
+\item[{{\bf Animatable}}]{\-\_\-object, }
+\item[{String}]{\-\_\-fieled\-Name, }
+\item[{float}]{\-\_\-start\-Val, }
+\item[{float}]{\-\_\-end\-Val, }
+\item[{float}]{\-\_\-time}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1util_1_1_animation_a43abd777d3c714dd526fca7a3ffde346}
+Constructs an \hyperlink{classcontroller_1_1util_1_1_animation}{Animation} object that will continually set the value of the object passed in.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-object} & Object on which the animation is being performed on \\
+\hline
+{\em \-\_\-name} & The name of the field in the object that is being updated \\
+\hline
+{\em \-\_\-start\-Val} & The starting value of the object's field \\
+\hline
+{\em \-\_\-end\-Val} & The ending value of the object's field \\
+\hline
+{\em \-\_\-time} & The time of the animation \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcontroller_1_1util_1_1_animation_a4f4b2dfafe34749665dde788be0ca3d4}{\index{controller\-::util\-::\-Animation@{controller\-::util\-::\-Animation}!step\-Animation@{step\-Animation}}
+\index{step\-Animation@{step\-Animation}!controller::util::Animation@{controller\-::util\-::\-Animation}}
+\subsubsection[{step\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}boolean controller.\-util.\-Animation.\-step\-Animation (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-delta\-Time}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1util_1_1_animation_a4f4b2dfafe34749665dde788be0ca3d4}
+Steps this animation by \-\_\-delta\-Time, which will result in the object's value being updated by +value\-Step
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-delta\-Time} & The time step \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the animation has finished, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/controller/util/Animation.\-java\end{DoxyCompactItemize}

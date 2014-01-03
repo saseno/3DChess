@@ -1,0 +1,67 @@
+\hypertarget{classcontroller_1_1_input_handler}{\section{controller.\-Input\-Handler Class Reference}
+\label{classcontroller_1_1_input_handler}\index{controller.\-Input\-Handler@{controller.\-Input\-Handler}}
+}
+Inheritance diagram for controller.\-Input\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcontroller_1_1_input_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcontroller_1_1_input_handler_a892a6081e0cdfcff43180dd3672ef97d}{{\bfseries Input\-Handler} (\hyperlink{classcontroller_1_1_game_loop}{Game\-Loop} \-\_\-game\-Controller, \hyperlink{classview_1_1_renderer}{Renderer} \-\_\-renderer)}\label{classcontroller_1_1_input_handler_a892a6081e0cdfcff43180dd3672ef97d}
+
+\item 
+void \hyperlink{classcontroller_1_1_input_handler_a08a9fb76e8c566a168bef8928215c69f}{mouse\-Clicked} (Mouse\-Event arg0)
+\item 
+\hypertarget{classcontroller_1_1_input_handler_a7f20d015bcca1f8956a48ffca7030204}{void {\bfseries mouse\-Entered} (Mouse\-Event arg0)}\label{classcontroller_1_1_input_handler_a7f20d015bcca1f8956a48ffca7030204}
+
+\item 
+\hypertarget{classcontroller_1_1_input_handler_a1afce6568d23b216b51bb660269fbf5b}{void {\bfseries mouse\-Exited} (Mouse\-Event arg0)}\label{classcontroller_1_1_input_handler_a1afce6568d23b216b51bb660269fbf5b}
+
+\item 
+\hypertarget{classcontroller_1_1_input_handler_a2f7e2f2634d4c97160800ea684e576d4}{void {\bfseries mouse\-Pressed} (Mouse\-Event arg0)}\label{classcontroller_1_1_input_handler_a2f7e2f2634d4c97160800ea684e576d4}
+
+\item 
+\hypertarget{classcontroller_1_1_input_handler_ac32298c58aec32dbdc3aae5a8f5f2ce4}{void {\bfseries mouse\-Released} (Mouse\-Event arg0)}\label{classcontroller_1_1_input_handler_ac32298c58aec32dbdc3aae5a8f5f2ce4}
+
+\item 
+void \hyperlink{classcontroller_1_1_input_handler_a744fe9a4f640629b33dca848a74e2eba}{key\-Pressed} (Key\-Event arg0)
+\item 
+\hypertarget{classcontroller_1_1_input_handler_aae66aefba8d5584b304fda662b508d5b}{void {\bfseries key\-Released} (Key\-Event arg0)}\label{classcontroller_1_1_input_handler_aae66aefba8d5584b304fda662b508d5b}
+
+\item 
+\hypertarget{classcontroller_1_1_input_handler_a285eb3a7aaa14fb9946321db3507dcdd}{void {\bfseries key\-Typed} (Key\-Event arg0)}\label{classcontroller_1_1_input_handler_a285eb3a7aaa14fb9946321db3507dcdd}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles any Keystrokes or Mouse-\/clicks that occur within the chess frame. The methods interprets the clicks, and passes along commands to the \hyperlink{classcontroller_1_1_game_loop}{Game\-Loop} or Renderer
+
+\begin{DoxyAuthor}{Author}
+Nicholas 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcontroller_1_1_input_handler_a744fe9a4f640629b33dca848a74e2eba}{\index{controller\-::\-Input\-Handler@{controller\-::\-Input\-Handler}!key\-Pressed@{key\-Pressed}}
+\index{key\-Pressed@{key\-Pressed}!controller::InputHandler@{controller\-::\-Input\-Handler}}
+\subsubsection[{key\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void controller.\-Input\-Handler.\-key\-Pressed (
+\begin{DoxyParamCaption}
+\item[{Key\-Event}]{arg0}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_input_handler_a744fe9a4f640629b33dca848a74e2eba}
+This method captures any key presses, which currently just handles undo \hypertarget{classcontroller_1_1_input_handler_a08a9fb76e8c566a168bef8928215c69f}{\index{controller\-::\-Input\-Handler@{controller\-::\-Input\-Handler}!mouse\-Clicked@{mouse\-Clicked}}
+\index{mouse\-Clicked@{mouse\-Clicked}!controller::InputHandler@{controller\-::\-Input\-Handler}}
+\subsubsection[{mouse\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}void controller.\-Input\-Handler.\-mouse\-Clicked (
+\begin{DoxyParamCaption}
+\item[{Mouse\-Event}]{arg0}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_input_handler_a08a9fb76e8c566a168bef8928215c69f}
+This method interprets a click within the chess window. It uses the camera, to find where that click translates into 3\-D space (ie where it intersects the board). This method handles the cases where there is already of selected a piece, and what to do with that piece 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/controller/Input\-Handler.\-java\end{DoxyCompactItemize}

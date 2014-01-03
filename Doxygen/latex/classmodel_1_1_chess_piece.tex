@@ -1,0 +1,309 @@
+\hypertarget{classmodel_1_1_chess_piece}{\section{model.\-Chess\-Piece Class Reference}
+\label{classmodel_1_1_chess_piece}\index{model.\-Chess\-Piece@{model.\-Chess\-Piece}}
+}
+Inheritance diagram for model.\-Chess\-Piece\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{classmodel_1_1_chess_piece}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodel_1_1_chess_piece_a67bd82c1cddad23e646cde7505bb5cbb}{Chess\-Piece} (int x, int y, \hyperlink{classmodel_1_1board_1_1_board}{Board} \-\_\-board, \hyperlink{classcontroller_1_1_player}{Player} \-\_\-player)
+\item 
+\hyperlink{classmodel_1_1_chess_piece}{Chess\-Piece} \hyperlink{classmodel_1_1_chess_piece_af8707e6a255bcb19d1e4936a20e6dc97}{move\-Piece\-To\-Tile} (Point loc, boolean check\-Valid)
+\item 
+abstract Array\-List$<$ \hyperlink{classmodel_1_1_chess_move}{Chess\-Move} $>$ \hyperlink{classmodel_1_1_chess_piece_a39d690c52727de4a27d2faee4e8b1ac7}{get\-Possible\-Moves} ()
+\item 
+Array\-List$<$ \hyperlink{classmodel_1_1_chess_move}{Chess\-Move} $>$ \hyperlink{classmodel_1_1_chess_piece_ac47c847341b833c6f3a6fa12c555b859}{get\-Capture\-Moves} ()
+\item 
+Array\-List$<$ \hyperlink{classmodel_1_1_chess_move}{Chess\-Move} $>$ \hyperlink{classmodel_1_1_chess_piece_a1f7c0c71547a354d71404b8c8a0020ac}{get\-Valid\-Moves} ()
+\item 
+abstract String \hyperlink{classmodel_1_1_chess_piece_a68308e2fa0fe868f7386d40c6cd925df}{get\-Type} ()
+\item 
+\hypertarget{classmodel_1_1_chess_piece_ad84ac395de45ea100c9731fb086ef1c0}{void {\bfseries set\-Has\-Moved} (boolean had\-Moved)}\label{classmodel_1_1_chess_piece_ad84ac395de45ea100c9731fb086ef1c0}
+
+\item 
+boolean \hyperlink{classmodel_1_1_chess_piece_a085fb407774b223a317d5ad982b88aee}{get\-Has\-Moved} ()
+\item 
+\hyperlink{classcontroller_1_1_player}{Player} \hyperlink{classmodel_1_1_chess_piece_ac2556be84d4990a806460bbace0610e4}{get\-Player} ()
+\item 
+void \hyperlink{classmodel_1_1_chess_piece_ad03887b1abfe5503aff3e789f1f15958}{set\-Location} (Point \-\_\-location)
+\item 
+Point \hyperlink{classmodel_1_1_chess_piece_ae87f373c0666382c92cb644b1a467f6b}{get\-Location} ()
+\item 
+void \hyperlink{classmodel_1_1_chess_piece_af587b341a0fe842e6aa7562955c33791}{render} (G\-L2 gl)
+\item 
+void \hyperlink{classmodel_1_1_chess_piece_a9c6576e79cfbc2cc7db4b57569089d1b}{set\-Value} (String field\-Name, float value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Array\-List$<$ \hyperlink{classmodel_1_1_chess_move}{Chess\-Move} $>$ \hyperlink{classmodel_1_1_chess_piece_ae17e31878bc8896a3dc576c62898c993}{get\-Rank\-File\-Moves} (boolean cont, boolean can\-Capture)
+\item 
+Array\-List$<$ \hyperlink{classmodel_1_1_chess_move}{Chess\-Move} $>$ \hyperlink{classmodel_1_1_chess_piece_ab8916510321ef5b697b4cd3dd1c7da80}{get\-Diagonal\-Moves} (boolean cont, boolean can\-Capture)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Point \hyperlink{classmodel_1_1_chess_piece_a7fc68849278fd30e4c238e8e40d6be8b}{location}
+\item 
+boolean \hyperlink{classmodel_1_1_chess_piece_ab3cb2b4640d680527a76ee105d233107}{has\-Moved}
+\item 
+\hyperlink{classcontroller_1_1_player}{Player} \hyperlink{classmodel_1_1_chess_piece_a7c821434522ec5b3f84549ab7b49614f}{player}
+\item 
+\hyperlink{classmodel_1_1board_1_1_board}{Board} \hyperlink{classmodel_1_1_chess_piece_a41b428c5909b4d5bf0dab321be4cfa56}{board}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic template for any \hyperlink{classmodel_1_1_chess_piece}{Chess\-Piece}, which provides the basic methods to move the Piece.
+
+\begin{DoxyAuthor}{Author}
+Nicholas 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmodel_1_1_chess_piece_a67bd82c1cddad23e646cde7505bb5cbb}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!Chess\-Piece@{Chess\-Piece}}
+\index{Chess\-Piece@{Chess\-Piece}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{Chess\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}model.\-Chess\-Piece.\-Chess\-Piece (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf Board}}]{\-\_\-board, }
+\item[{{\bf Player}}]{\-\_\-player}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1_chess_piece_a67bd82c1cddad23e646cde7505bb5cbb}
+Initializes the basic variables of a chess piece and adds it to the board
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em \-\_\-board} & \\
+\hline
+{\em \-\_\-player} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmodel_1_1_chess_piece_ac47c847341b833c6f3a6fa12c555b859}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!get\-Capture\-Moves@{get\-Capture\-Moves}}
+\index{get\-Capture\-Moves@{get\-Capture\-Moves}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{get\-Capture\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<${\bf Chess\-Move}$>$ model.\-Chess\-Piece.\-get\-Capture\-Moves (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1_chess_piece_ac47c847341b833c6f3a6fa12c555b859}
+Subset of \hyperlink{classmodel_1_1_chess_piece_a39d690c52727de4a27d2faee4e8b1ac7}{get\-Possible\-Moves()} which returns all the moves that result in a capture
+
+\begin{DoxyReturn}{Returns}
+An array of all the possible moves this piece can make that result in it taking a piece. 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1_chess_piece_ab8916510321ef5b697b4cd3dd1c7da80}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!get\-Diagonal\-Moves@{get\-Diagonal\-Moves}}
+\index{get\-Diagonal\-Moves@{get\-Diagonal\-Moves}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{get\-Diagonal\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<${\bf Chess\-Move}$>$ model.\-Chess\-Piece.\-get\-Diagonal\-Moves (
+\begin{DoxyParamCaption}
+\item[{boolean}]{cont, }
+\item[{boolean}]{can\-Capture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_1_1_chess_piece_ab8916510321ef5b697b4cd3dd1c7da80}
+Used by pieces such as the bishop, queen and king to get the moves in the diagonal directions of the boards. Will only return all the moves up to (and including) an enemy piece and as long as the piece remains valid
+
+
+\begin{DoxyParams}{Parameters}
+{\em cont} & true returns the list of all moves in the diagonal directions \\
+\hline
+{\em can\-Capture} & true if this piece can capture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of the valid moves possible in the diagonal direction 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1_chess_piece_a085fb407774b223a317d5ad982b88aee}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!get\-Has\-Moved@{get\-Has\-Moved}}
+\index{get\-Has\-Moved@{get\-Has\-Moved}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{get\-Has\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-Chess\-Piece.\-get\-Has\-Moved (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1_chess_piece_a085fb407774b223a317d5ad982b88aee}
+\begin{DoxyReturn}{Returns}
+true if this piece has moved 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1_chess_piece_ae87f373c0666382c92cb644b1a467f6b}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!get\-Location@{get\-Location}}
+\index{get\-Location@{get\-Location}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{get\-Location}]{\setlength{\rightskip}{0pt plus 5cm}Point model.\-Chess\-Piece.\-get\-Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1_chess_piece_ae87f373c0666382c92cb644b1a467f6b}
+\begin{DoxyReturn}{Returns}
+Point representing the board location of this object 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1_chess_piece_ac2556be84d4990a806460bbace0610e4}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!get\-Player@{get\-Player}}
+\index{get\-Player@{get\-Player}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{get\-Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player} model.\-Chess\-Piece.\-get\-Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1_chess_piece_ac2556be84d4990a806460bbace0610e4}
+\begin{DoxyReturn}{Returns}
+the owning player 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1_chess_piece_a39d690c52727de4a27d2faee4e8b1ac7}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!get\-Possible\-Moves@{get\-Possible\-Moves}}
+\index{get\-Possible\-Moves@{get\-Possible\-Moves}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{get\-Possible\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}abstract Array\-List$<${\bf Chess\-Move}$>$ model.\-Chess\-Piece.\-get\-Possible\-Moves (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1_chess_piece_a39d690c52727de4a27d2faee4e8b1ac7}
+Overridden by all chess piece classes, which returns an Array of chess moves that this peice can make
+
+\begin{DoxyReturn}{Returns}
+An array of all the possible moves this piece can make 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1pieces_1_1_king_a01079269fe18d60396f980ea099ae7cc}{model.\-pieces.\-King}, \hyperlink{classmodel_1_1pieces_1_1_pawn_aa8a699402fec460438fe1f9d1ba33632}{model.\-pieces.\-Pawn}, \hyperlink{classmodel_1_1pieces_1_1_chancellor_a6ec06408734037a969ac9d6d0090894a}{model.\-pieces.\-Chancellor}, \hyperlink{classmodel_1_1pieces_1_1_knight_a6fc2b0d4bef1c83e84c9351d0b67ae28}{model.\-pieces.\-Knight}, \hyperlink{classmodel_1_1pieces_1_1_lame_queen_a1c58d7e40397c75344909c305f559f7f}{model.\-pieces.\-Lame\-Queen}, \hyperlink{classmodel_1_1pieces_1_1_queen_a94300f345153c441518363f4bef81f9c}{model.\-pieces.\-Queen}, \hyperlink{classmodel_1_1pieces_1_1_rook_acdc88fcdbb81116be30b7f8c8c39e735}{model.\-pieces.\-Rook}, and \hyperlink{classmodel_1_1pieces_1_1_bishop_a833d5968dbfb775dc72d1cadb68242b3}{model.\-pieces.\-Bishop}.
+
+\hypertarget{classmodel_1_1_chess_piece_ae17e31878bc8896a3dc576c62898c993}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!get\-Rank\-File\-Moves@{get\-Rank\-File\-Moves}}
+\index{get\-Rank\-File\-Moves@{get\-Rank\-File\-Moves}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{get\-Rank\-File\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<${\bf Chess\-Move}$>$ model.\-Chess\-Piece.\-get\-Rank\-File\-Moves (
+\begin{DoxyParamCaption}
+\item[{boolean}]{cont, }
+\item[{boolean}]{can\-Capture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_1_1_chess_piece_ae17e31878bc8896a3dc576c62898c993}
+Used by pieces such as the rook, queen and king to get the moves in the rank-\/file directions of the boards. Will only return all the moves up to (and including) an enemy piece and as long as the piece remains valid
+
+
+\begin{DoxyParams}{Parameters}
+{\em cont} & true returns the list of all moves in the flat directions \\
+\hline
+{\em can\-Capture} & true if this piece can capture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of the valid moves possible in the flat direction 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1_chess_piece_a68308e2fa0fe868f7386d40c6cd925df}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}abstract String model.\-Chess\-Piece.\-get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1_chess_piece_a68308e2fa0fe868f7386d40c6cd925df}
+Used to determine a pieces type without using reflection (ie instanceof)
+
+\begin{DoxyReturn}{Returns}
+A string that contains the name of the piece, ie the Pawn class would return \char`\"{}\-Pawn\char`\"{} 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1pieces_1_1_pawn_a3f4abbb3b7e744569928e51f9a7ace27}{model.\-pieces.\-Pawn}, \hyperlink{classmodel_1_1pieces_1_1_king_aae0c46ac679ce113aa2c5bf64997f618}{model.\-pieces.\-King}, \hyperlink{classmodel_1_1pieces_1_1_knight_a692ba3f99660d39fdbfd55c35d709bed}{model.\-pieces.\-Knight}, \hyperlink{classmodel_1_1pieces_1_1_chancellor_ad8eb0d56c97defeb526ade8f63ee9e90}{model.\-pieces.\-Chancellor}, \hyperlink{classmodel_1_1pieces_1_1_lame_queen_a70f4bafe5a2b59a281b4ef23f3e3680f}{model.\-pieces.\-Lame\-Queen}, \hyperlink{classmodel_1_1pieces_1_1_queen_acf33a9937af8917615b2a53300830af2}{model.\-pieces.\-Queen}, \hyperlink{classmodel_1_1pieces_1_1_bishop_af15a1172b7ec3d8e895d519f8e540d1c}{model.\-pieces.\-Bishop}, and \hyperlink{classmodel_1_1pieces_1_1_rook_a4ff4e4b36a743af9b64de9b53a9e1535}{model.\-pieces.\-Rook}.
+
+\hypertarget{classmodel_1_1_chess_piece_a1f7c0c71547a354d71404b8c8a0020ac}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!get\-Valid\-Moves@{get\-Valid\-Moves}}
+\index{get\-Valid\-Moves@{get\-Valid\-Moves}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{get\-Valid\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<${\bf Chess\-Move}$>$ model.\-Chess\-Piece.\-get\-Valid\-Moves (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1_chess_piece_a1f7c0c71547a354d71404b8c8a0020ac}
+Subset of \hyperlink{classmodel_1_1_chess_piece_a39d690c52727de4a27d2faee4e8b1ac7}{get\-Possible\-Moves()} which contains all the moves which are valid to the type of game mode. For example, \hyperlink{classmodel_1_1_chess_piece_a39d690c52727de4a27d2faee4e8b1ac7}{get\-Possible\-Moves()} for a king would return the 8 squares around it, while \hyperlink{classmodel_1_1_chess_piece_a1f7c0c71547a354d71404b8c8a0020ac}{get\-Valid\-Moves()} would only return the moves that don't put this king in check (for a standard game)
+
+\begin{DoxyReturn}{Returns}
+An array of valid chess moves 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1_chess_piece_af8707e6a255bcb19d1e4936a20e6dc97}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!move\-Piece\-To\-Tile@{move\-Piece\-To\-Tile}}
+\index{move\-Piece\-To\-Tile@{move\-Piece\-To\-Tile}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{move\-Piece\-To\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Chess\-Piece} model.\-Chess\-Piece.\-move\-Piece\-To\-Tile (
+\begin{DoxyParamCaption}
+\item[{Point}]{loc, }
+\item[{boolean}]{check\-Valid}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1_chess_piece_af8707e6a255bcb19d1e4936a20e6dc97}
+Moves this piece to the position, while internally checking if the moves is valid (by comparing the given location to possible moves)
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Illegal\-Argument\-Exception} & if this position cannot move to the given location \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & the location to move to \\
+\hline
+{\em check\-Valid} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classmodel_1_1_chess_piece}{Chess\-Piece} that was at the position original 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1_chess_piece_af587b341a0fe842e6aa7562955c33791}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!render@{render}}
+\index{render@{render}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void model.\-Chess\-Piece.\-render (
+\begin{DoxyParamCaption}
+\item[{G\-L2}]{gl}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1_chess_piece_af587b341a0fe842e6aa7562955c33791}
+Renders this piece to the current open\-G\-L context. The draw\-X and draw\-Y are provided by the board, while the model is retrieved from the Asset\-Loader class. The model used is just the name of the piece (ie \hyperlink{classmodel_1_1_chess_piece_a68308e2fa0fe868f7386d40c6cd925df}{get\-Type()})
+
+
+\begin{DoxyParams}{Parameters}
+{\em gl} & \\
+\hline
+{\em draw\-X} & \\
+\hline
+{\em draw\-Z} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_1_1_chess_piece_ad03887b1abfe5503aff3e789f1f15958}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!set\-Location@{set\-Location}}
+\index{set\-Location@{set\-Location}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{set\-Location}]{\setlength{\rightskip}{0pt plus 5cm}void model.\-Chess\-Piece.\-set\-Location (
+\begin{DoxyParamCaption}
+\item[{Point}]{\-\_\-location}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1_chess_piece_ad03887b1abfe5503aff3e789f1f15958}
+Sets this piece's board location to \-\_\-location. N\-O\-T\-E\-: Doe's N\-O\-T change has\-Moved
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-location} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_1_1_chess_piece_a9c6576e79cfbc2cc7db4b57569089d1b}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!set\-Value@{set\-Value}}
+\index{set\-Value@{set\-Value}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{set\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void model.\-Chess\-Piece.\-set\-Value (
+\begin{DoxyParamCaption}
+\item[{String}]{field\-Name, }
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1_chess_piece_a9c6576e79cfbc2cc7db4b57569089d1b}
+So that this piece can be animatable, it must overload this method. Two fields can be animated in the class, draw\-Location\-X, and draw\-Location\-Y which are the positions this piece will be rendered on the screen. 
+
+Implements \hyperlink{interfacecontroller_1_1util_1_1_animation_1_1_animatable}{controller.\-util.\-Animation.\-Animatable}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmodel_1_1_chess_piece_a41b428c5909b4d5bf0dab321be4cfa56}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!board@{board}}
+\index{board@{board}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{board}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Board} model.\-Chess\-Piece.\-board\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_1_1_chess_piece_a41b428c5909b4d5bf0dab321be4cfa56}
+Reference to the board \hypertarget{classmodel_1_1_chess_piece_ab3cb2b4640d680527a76ee105d233107}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!has\-Moved@{has\-Moved}}
+\index{has\-Moved@{has\-Moved}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{has\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-Chess\-Piece.\-has\-Moved\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_1_1_chess_piece_ab3cb2b4640d680527a76ee105d233107}
+If the piece has been used yet \hypertarget{classmodel_1_1_chess_piece_a7fc68849278fd30e4c238e8e40d6be8b}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!location@{location}}
+\index{location@{location}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{location}]{\setlength{\rightskip}{0pt plus 5cm}Point model.\-Chess\-Piece.\-location\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_1_1_chess_piece_a7fc68849278fd30e4c238e8e40d6be8b}
+The board location of the piece \hypertarget{classmodel_1_1_chess_piece_a7c821434522ec5b3f84549ab7b49614f}{\index{model\-::\-Chess\-Piece@{model\-::\-Chess\-Piece}!player@{player}}
+\index{player@{player}!model::ChessPiece@{model\-::\-Chess\-Piece}}
+\subsubsection[{player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player} model.\-Chess\-Piece.\-player\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_1_1_chess_piece_a7c821434522ec5b3f84549ab7b49614f}
+The player owning this piece 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/model/Chess\-Piece.\-java\end{DoxyCompactItemize}

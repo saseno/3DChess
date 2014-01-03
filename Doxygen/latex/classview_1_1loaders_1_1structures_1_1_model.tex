@@ -1,0 +1,41 @@
+\hypertarget{classview_1_1loaders_1_1structures_1_1_model}{\section{view.\-loaders.\-structures.\-Model Class Reference}
+\label{classview_1_1loaders_1_1structures_1_1_model}\index{view.\-loaders.\-structures.\-Model@{view.\-loaders.\-structures.\-Model}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classview_1_1loaders_1_1structures_1_1_model_ae6793c35c9c10e2e9d8f3dad712312e8}{{\bfseries Model} (G\-L2 gl, int \-\_\-type, Float\-Buffer \-\_\-buffer, int \-\_\-size, String texture\-Name)}\label{classview_1_1loaders_1_1structures_1_1_model_ae6793c35c9c10e2e9d8f3dad712312e8}
+
+\item 
+void \hyperlink{classview_1_1loaders_1_1structures_1_1_model_a15b7163c868eb6450ee4e0f350435b17}{render} (G\-L2 gl)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class represents a 3d model, and is responsible for holding a reference to an opengl buffer, and the name of the texture that should be bound before rendering.
+
+\begin{DoxyAuthor}{Author}
+Nicholas 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classview_1_1loaders_1_1structures_1_1_model_a15b7163c868eb6450ee4e0f350435b17}{\index{view\-::loaders\-::structures\-::\-Model@{view\-::loaders\-::structures\-::\-Model}!render@{render}}
+\index{render@{render}!view::loaders::structures::Model@{view\-::loaders\-::structures\-::\-Model}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void view.\-loaders.\-structures.\-Model.\-render (
+\begin{DoxyParamCaption}
+\item[{G\-L2}]{gl}
+\end{DoxyParamCaption}
+)}}\label{classview_1_1loaders_1_1structures_1_1_model_a15b7163c868eb6450ee4e0f350435b17}
+Renders the model. If the vbo has not yet been sent to the G\-P\-U it, will be during the call. Also binds the texture (if specified) associated with this model
+
+
+\begin{DoxyParams}{Parameters}
+{\em gl} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/view/loaders/structures/Model.\-java\end{DoxyCompactItemize}

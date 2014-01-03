@@ -1,0 +1,142 @@
+\hypertarget{classcontroller_1_1_game_loop}{\section{controller.\-Game\-Loop Class Reference}
+\label{classcontroller_1_1_game_loop}\index{controller.\-Game\-Loop@{controller.\-Game\-Loop}}
+}
+Inheritance diagram for controller.\-Game\-Loop\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcontroller_1_1_game_loop}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcontroller_1_1_game_loop_ad7c4e9e77101658404db3a37b21dfafb}{Game\-Loop} (G\-L\-Canvas \-\_\-canvas, J\-Frame frame)
+\item 
+synchronized void \hyperlink{classcontroller_1_1_game_loop_a416822fda05ffdbbe385b5157b120a98}{setup\-New\-Game} (\hyperlink{interfacemodel_1_1game__modes_1_1_game_mode}{Game\-Mode} \-\_\-game\-Mode)
+\item 
+void \hyperlink{classcontroller_1_1_game_loop_a50c1df21b6fcb5de95b90215cc6f0261}{run} ()
+\item 
+synchronized void \hyperlink{classcontroller_1_1_game_loop_a2f455d14b32197c0506025227b1cfa59}{execute\-Move} (\hyperlink{classmodel_1_1_chess_move}{Chess\-Move} move)
+\item 
+synchronized void \hyperlink{classcontroller_1_1_game_loop_a9747fb2e4d65a3918d1f589bf6e06e03}{undo\-Last\-Move} ()
+\item 
+void \hyperlink{classcontroller_1_1_game_loop_a3c58f6ba8b5ec3510ff521c7686e1c11}{cancel\-Game} (\hyperlink{classcontroller_1_1_player}{Player} \-\_\-winner)
+\item 
+\hypertarget{classcontroller_1_1_game_loop_a8fd38b2b4d1fc537055388bbc369f8e3}{void {\bfseries add\-Animation} (\hyperlink{classcontroller_1_1util_1_1_animation}{Animation} anim)}\label{classcontroller_1_1_game_loop_a8fd38b2b4d1fc537055388bbc369f8e3}
+
+\item 
+\hypertarget{classcontroller_1_1_game_loop_a23711cbf256215f376af6854e698c374}{void {\bfseries set\-Renderer} (\hyperlink{classview_1_1_renderer}{Renderer} \-\_\-renderer)}\label{classcontroller_1_1_game_loop_a23711cbf256215f376af6854e698c374}
+
+\item 
+\hypertarget{classcontroller_1_1_game_loop_a85488db6ce4c71d17af67eda4f04e3a9}{\hyperlink{classmodel_1_1board_1_1_board}{Board} {\bfseries get\-Board} ()}\label{classcontroller_1_1_game_loop_a85488db6ce4c71d17af67eda4f04e3a9}
+
+\item 
+\hypertarget{classcontroller_1_1_game_loop_aa574b3655f4c4c3aa3d04be065a11b2b}{\hyperlink{classcontroller_1_1_player}{Player} {\bfseries get\-Current\-Player} ()}\label{classcontroller_1_1_game_loop_aa574b3655f4c4c3aa3d04be065a11b2b}
+
+\item 
+\hypertarget{classcontroller_1_1_game_loop_ac01e3a34770b1b0b92bc55735713c86e}{\hyperlink{classcontroller_1_1_player}{Player} {\bfseries get\-Player1} ()}\label{classcontroller_1_1_game_loop_ac01e3a34770b1b0b92bc55735713c86e}
+
+\item 
+\hypertarget{classcontroller_1_1_game_loop_acf6911bb4386ecf2a63ff33fcc21b71c}{\hyperlink{classcontroller_1_1_player}{Player} {\bfseries get\-Player2} ()}\label{classcontroller_1_1_game_loop_acf6911bb4386ecf2a63ff33fcc21b71c}
+
+\item 
+\hypertarget{classcontroller_1_1_game_loop_a0dbc7f4a103a2e9447ff109e1e4b12ee}{G\-L\-Canvas {\bfseries get\-Canvas} ()}\label{classcontroller_1_1_game_loop_a0dbc7f4a103a2e9447ff109e1e4b12ee}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will control the gameflow of the program. This class implements the maintaining running loop for this application, and has basic functions that control chess gameflow, such as execute move, cancel game, and setup\-New\-Game
+
+\begin{DoxyAuthor}{Author}
+Nicholas 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classcontroller_1_1_game_loop_ad7c4e9e77101658404db3a37b21dfafb}{\index{controller\-::\-Game\-Loop@{controller\-::\-Game\-Loop}!Game\-Loop@{Game\-Loop}}
+\index{Game\-Loop@{Game\-Loop}!controller::GameLoop@{controller\-::\-Game\-Loop}}
+\subsubsection[{Game\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}controller.\-Game\-Loop.\-Game\-Loop (
+\begin{DoxyParamCaption}
+\item[{G\-L\-Canvas}]{\-\_\-canvas, }
+\item[{J\-Frame}]{frame}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_game_loop_ad7c4e9e77101658404db3a37b21dfafb}
+Constructs a new gameloop, with the given canvas. The renderer is set later.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-canvas} & The opengl window created \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcontroller_1_1_game_loop_a3c58f6ba8b5ec3510ff521c7686e1c11}{\index{controller\-::\-Game\-Loop@{controller\-::\-Game\-Loop}!cancel\-Game@{cancel\-Game}}
+\index{cancel\-Game@{cancel\-Game}!controller::GameLoop@{controller\-::\-Game\-Loop}}
+\subsubsection[{cancel\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void controller.\-Game\-Loop.\-cancel\-Game (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{\-\_\-winner}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_game_loop_a3c58f6ba8b5ec3510ff521c7686e1c11}
+Cancels the game, which will result in no moves, being able to be made, but the any animations will finish.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-winner} & The winner of the game, can be null in which case the game was a tie \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcontroller_1_1_game_loop_a2f455d14b32197c0506025227b1cfa59}{\index{controller\-::\-Game\-Loop@{controller\-::\-Game\-Loop}!execute\-Move@{execute\-Move}}
+\index{execute\-Move@{execute\-Move}!controller::GameLoop@{controller\-::\-Game\-Loop}}
+\subsubsection[{execute\-Move}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void controller.\-Game\-Loop.\-execute\-Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\-Move}}]{move}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_game_loop_a2f455d14b32197c0506025227b1cfa59}
+Executes a chess move, sets up an animation, and switches the current\-Player. The Chess\-Move is also added the total move list, so it can be undone later if necessary. This move also checks to see if there is any moves left for the other to make, otherwise the game is ended If their is no game running, this method does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Chess\-Move to be executed, must be a valid\-Move \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcontroller_1_1_game_loop_a50c1df21b6fcb5de95b90215cc6f0261}{\index{controller\-::\-Game\-Loop@{controller\-::\-Game\-Loop}!run@{run}}
+\index{run@{run}!controller::GameLoop@{controller\-::\-Game\-Loop}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void controller.\-Game\-Loop.\-run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_game_loop_a50c1df21b6fcb5de95b90215cc6f0261}
+The method is what runs when start() is called on a thread. The method will continue running until running is set to \char`\"{}false\char`\"{}, ie the game is over. When running is set to false, the winner will be displayed and new game will be set up. \hypertarget{classcontroller_1_1_game_loop_a416822fda05ffdbbe385b5157b120a98}{\index{controller\-::\-Game\-Loop@{controller\-::\-Game\-Loop}!setup\-New\-Game@{setup\-New\-Game}}
+\index{setup\-New\-Game@{setup\-New\-Game}!controller::GameLoop@{controller\-::\-Game\-Loop}}
+\subsubsection[{setup\-New\-Game}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void controller.\-Game\-Loop.\-setup\-New\-Game (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\-Mode}}]{\-\_\-game\-Mode}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_game_loop_a416822fda05ffdbbe385b5157b120a98}
+Sets up the game for the given game\-Mode. This method initializes the players and the board. This method is called automatically, when the current game ends
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-game\-Mode} & The game mode to be used \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcontroller_1_1_game_loop_a9747fb2e4d65a3918d1f589bf6e06e03}{\index{controller\-::\-Game\-Loop@{controller\-::\-Game\-Loop}!undo\-Last\-Move@{undo\-Last\-Move}}
+\index{undo\-Last\-Move@{undo\-Last\-Move}!controller::GameLoop@{controller\-::\-Game\-Loop}}
+\subsubsection[{undo\-Last\-Move}]{\setlength{\rightskip}{0pt plus 5cm}synchronized void controller.\-Game\-Loop.\-undo\-Last\-Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1_game_loop_a9747fb2e4d65a3918d1f589bf6e06e03}
+Undoes a chess move, sets up an animation, and switches the current\-Player. If their is no game running, or there are moves to undo, this method does nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Chess\-Move to be executed, must be a valid\-Move \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/controller/Game\-Loop.\-java\end{DoxyCompactItemize}

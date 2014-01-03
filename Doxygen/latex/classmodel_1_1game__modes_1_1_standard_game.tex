@@ -1,0 +1,121 @@
+\hypertarget{classmodel_1_1game__modes_1_1_standard_game}{\section{model.\-game\-\_\-modes.\-Standard\-Game Class Reference}
+\label{classmodel_1_1game__modes_1_1_standard_game}\index{model.\-game\-\_\-modes.\-Standard\-Game@{model.\-game\-\_\-modes.\-Standard\-Game}}
+}
+Inheritance diagram for model.\-game\-\_\-modes.\-Standard\-Game\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmodel_1_1game__modes_1_1_standard_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmodel_1_1board_1_1_board}{Board} \hyperlink{classmodel_1_1game__modes_1_1_standard_game_af204c61bdf19a90aeef707435a65a4b0}{init\-Pieces} (\hyperlink{classcontroller_1_1_player}{Player} player1, \hyperlink{classcontroller_1_1_player}{Player} player2)
+\item 
+boolean \hyperlink{classmodel_1_1game__modes_1_1_standard_game_a532a81128fd4292f85774d2ec383bbe5}{board\-Valid} (\hyperlink{classmodel_1_1board_1_1_board}{Board} board, \hyperlink{classcontroller_1_1_player}{Player} mover, \hyperlink{classmodel_1_1_chess_move}{Chess\-Move} last\-Move)
+\item 
+boolean \hyperlink{classmodel_1_1game__modes_1_1_standard_game_af859966b1b11825d30292cc9a6adf3e4}{has\-Player\-Lost} (\hyperlink{classmodel_1_1board_1_1_board}{Board} board, \hyperlink{classcontroller_1_1_player}{Player} victim)
+\item 
+void \hyperlink{classmodel_1_1game__modes_1_1_standard_game_ac71e444bda1320574ddf4be97724dbb6}{post\-Move\-Action} (final \hyperlink{classcontroller_1_1_game_loop}{Game\-Loop} game\-Controller, \hyperlink{classmodel_1_1_chess_move}{Chess\-Move} last\-Move)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a \hyperlink{classmodel_1_1game__modes_1_1_standard_game}{Standard\-Game}, where the board is rectangular and the king cannot be in check.
+
+\begin{DoxyAuthor}{Author}
+Nicholas 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmodel_1_1game__modes_1_1_standard_game_a532a81128fd4292f85774d2ec383bbe5}{\index{model\-::game\-\_\-modes\-::\-Standard\-Game@{model\-::game\-\_\-modes\-::\-Standard\-Game}!board\-Valid@{board\-Valid}}
+\index{board\-Valid@{board\-Valid}!model::game_modes::StandardGame@{model\-::game\-\_\-modes\-::\-Standard\-Game}}
+\subsubsection[{board\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-game\-\_\-modes.\-Standard\-Game.\-board\-Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf Board}}]{board, }
+\item[{{\bf Player}}]{mover, }
+\item[{{\bf Chess\-Move}}]{last\-Move}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1game__modes_1_1_standard_game_a532a81128fd4292f85774d2ec383bbe5}
+In a standard game this board is inspected to make sure the king is not in check \begin{DoxyReturn}{Returns}
+true if the king is not in check, false otherwise; 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacemodel_1_1game__modes_1_1_game_mode_ab953f82866d9146bde4a2de96af7c308}{model.\-game\-\_\-modes.\-Game\-Mode}.
+
+\hypertarget{classmodel_1_1game__modes_1_1_standard_game_af859966b1b11825d30292cc9a6adf3e4}{\index{model\-::game\-\_\-modes\-::\-Standard\-Game@{model\-::game\-\_\-modes\-::\-Standard\-Game}!has\-Player\-Lost@{has\-Player\-Lost}}
+\index{has\-Player\-Lost@{has\-Player\-Lost}!model::game_modes::StandardGame@{model\-::game\-\_\-modes\-::\-Standard\-Game}}
+\subsubsection[{has\-Player\-Lost}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-game\-\_\-modes.\-Standard\-Game.\-has\-Player\-Lost (
+\begin{DoxyParamCaption}
+\item[{{\bf Board}}]{board, }
+\item[{{\bf Player}}]{victim}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1game__modes_1_1_standard_game_af859966b1b11825d30292cc9a6adf3e4}
+Called when there are no moves left for the current player. At this point the game will be a stalemate or a player has lost.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & \\
+\hline
+{\em victim} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player has lost, false if it is a stalemate 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacemodel_1_1game__modes_1_1_game_mode_adaba2585b6c82e7e14532692db14898f}{model.\-game\-\_\-modes.\-Game\-Mode}.
+
+\hypertarget{classmodel_1_1game__modes_1_1_standard_game_af204c61bdf19a90aeef707435a65a4b0}{\index{model\-::game\-\_\-modes\-::\-Standard\-Game@{model\-::game\-\_\-modes\-::\-Standard\-Game}!init\-Pieces@{init\-Pieces}}
+\index{init\-Pieces@{init\-Pieces}!model::game_modes::StandardGame@{model\-::game\-\_\-modes\-::\-Standard\-Game}}
+\subsubsection[{init\-Pieces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Board} model.\-game\-\_\-modes.\-Standard\-Game.\-init\-Pieces (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player1, }
+\item[{{\bf Player}}]{player2}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1game__modes_1_1_standard_game_af204c61bdf19a90aeef707435a65a4b0}
+Creates a board object with the players passed in. This method will return a complete setup based on the \hyperlink{interfacemodel_1_1game__modes_1_1_game_mode}{Game\-Mode}
+
+
+\begin{DoxyParams}{Parameters}
+{\em player1} & \\
+\hline
+{\em player2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Board that has been setup with the rules of the \hyperlink{interfacemodel_1_1game__modes_1_1_game_mode}{Game\-Mode} 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{interfacemodel_1_1game__modes_1_1_game_mode_a237818232e386862838f6b507299497b}{model.\-game\-\_\-modes.\-Game\-Mode}.
+
+\hypertarget{classmodel_1_1game__modes_1_1_standard_game_ac71e444bda1320574ddf4be97724dbb6}{\index{model\-::game\-\_\-modes\-::\-Standard\-Game@{model\-::game\-\_\-modes\-::\-Standard\-Game}!post\-Move\-Action@{post\-Move\-Action}}
+\index{post\-Move\-Action@{post\-Move\-Action}!model::game_modes::StandardGame@{model\-::game\-\_\-modes\-::\-Standard\-Game}}
+\subsubsection[{post\-Move\-Action}]{\setlength{\rightskip}{0pt plus 5cm}void model.\-game\-\_\-modes.\-Standard\-Game.\-post\-Move\-Action (
+\begin{DoxyParamCaption}
+\item[{final {\bf Game\-Loop}}]{game\-Controller, }
+\item[{{\bf Chess\-Move}}]{last\-Move}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1game__modes_1_1_standard_game_ac71e444bda1320574ddf4be97724dbb6}
+Called after a move has been executed. This method should display and warning, such as check in a Standard game
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\-Controller} & \\
+\hline
+{\em last\-Move} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{interfacemodel_1_1game__modes_1_1_game_mode_a034774ac426a436f2c19e7afc8eb8747}{model.\-game\-\_\-modes.\-Game\-Mode}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/model/game\-\_\-modes/Standard\-Game.\-java\end{DoxyCompactItemize}

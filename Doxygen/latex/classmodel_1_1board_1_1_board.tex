@@ -1,0 +1,606 @@
+\hypertarget{classmodel_1_1board_1_1_board}{\section{model.\-board.\-Board Class Reference}
+\label{classmodel_1_1board_1_1_board}\index{model.\-board.\-Board@{model.\-board.\-Board}}
+}
+Inheritance diagram for model.\-board.\-Board\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmodel_1_1board_1_1_board}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract \hyperlink{classview_1_1loaders_1_1structures_1_1_model}{Model} \hyperlink{classmodel_1_1board_1_1_board_a27db942b8b62795b8e8e615c2e39b432}{generate\-Board\-Model} ()
+\item 
+abstract \hyperlink{classview_1_1loaders_1_1structures_1_1_model}{Model} \hyperlink{classmodel_1_1board_1_1_board_a40de2efe23a2a995394e7223a5c85896}{generate\-Tile\-Model} ()
+\item 
+abstract String \hyperlink{classmodel_1_1board_1_1_board_a6d5675d9156c70de1c08842cea728749}{get\-Type} ()
+\item 
+abstract Point2\-D.\-Float \hyperlink{classmodel_1_1board_1_1_board_a2e1be001e288e4501a80844b45024a94}{get\-Render\-Position} (Point loc)
+\item 
+abstract Point \hyperlink{classmodel_1_1board_1_1_board_adbfd9f6c5999ef5a9705abbfadb8c924}{get\-Board\-Position} (Point2\-D.\-Float render\-Point)
+\item 
+abstract \hyperlink{classmodel_1_1_chess_piece}{Chess\-Piece} \hyperlink{classmodel_1_1board_1_1_board_a430d840f3362de265f54f815bf02893a}{get\-Tile} (int x, int y)
+\item 
+abstract \hyperlink{classmodel_1_1_chess_piece}{Chess\-Piece} \hyperlink{classmodel_1_1board_1_1_board_a2ee2df58c449ad4251b26266a1c326d7}{set\-Tile} (\hyperlink{classmodel_1_1_chess_piece}{Chess\-Piece} piece, int x, int y)
+\item 
+abstract boolean \hyperlink{classmodel_1_1board_1_1_board_a7c4c6d14284584b90dd969ba80bda496}{is\-In\-Bounds} (int x, int y)
+\item 
+abstract boolean \hyperlink{classmodel_1_1board_1_1_board_ae6c8e172c9bb977b3be9f023736a3f80}{has\-Enemy\-Piece} (int x, int y, \hyperlink{classcontroller_1_1_player}{Player} attacker)
+\item 
+abstract boolean \hyperlink{classmodel_1_1board_1_1_board_abbfd0ab523b5a8953556ff6aad8d42c6}{is\-Movable\-Tile} (int x, int y, \hyperlink{classcontroller_1_1_player}{Player} attacker, boolean can\-Capture)
+\item 
+abstract Array\-List$<$ Point $>$ \hyperlink{classmodel_1_1board_1_1_board_adae13d194d3acf1ae586162cf8ae6786}{get\-Adjacent\-Rank\-File\-Tiles} (int x, int y)
+\item 
+abstract Array\-List$<$ Point $>$ \hyperlink{classmodel_1_1board_1_1_board_a5b3cecdde64a0a00a538fbc69e578f9c}{get\-Adjacent\-Diagonal\-Tiles} (int x, int y)
+\item 
+abstract Array\-List$<$ Point $>$ \hyperlink{classmodel_1_1board_1_1_board_ad65a4ec84fc3dad46f5b2f1e97ecc1b0}{get\-Knight\-Moves} (int x, int y)
+\item 
+abstract Array\-List$<$ Point $>$ \hyperlink{classmodel_1_1board_1_1_board_a4bd4b119f6f5669aaa2aab456056cd92}{get\-Pawn\-Moves} (int x, int y, \hyperlink{classmodel_1_1pieces_1_1_pawn}{Pawn} pawn)
+\item 
+abstract Array\-List$<$ Point $>$ \hyperlink{classmodel_1_1board_1_1_board_af75b477308f0cb632cf5e164246cd243}{get\-Pawn\-Attacks} (int x, int y, \hyperlink{classmodel_1_1pieces_1_1_pawn}{Pawn} pawn)
+\item 
+boolean \hyperlink{classmodel_1_1board_1_1_board_a20d22db525a1d022318b86cbfcd67e16}{is\-In\-Bounds} (Point loc)
+\item 
+boolean \hyperlink{classmodel_1_1board_1_1_board_a59b3e675b694301aef7e8f2cb6a1a65c}{has\-Enemy\-Piece} (Point loc, \hyperlink{classcontroller_1_1_player}{Player} attacker)
+\item 
+boolean \hyperlink{classmodel_1_1board_1_1_board_a1c27bff8bfe8cb594e6a576e5529b112}{is\-Movable\-Tile} (Point loc, \hyperlink{classcontroller_1_1_player}{Player} player, boolean can\-Capture)
+\item 
+Array\-List$<$ Point $>$ \hyperlink{classmodel_1_1board_1_1_board_ac8ffc792e85b09c00923dd593368d107}{get\-Adjacent\-Rank\-File\-Tiles} (Point loc)
+\item 
+Array\-List$<$ Point $>$ \hyperlink{classmodel_1_1board_1_1_board_a5279618349cb2950d412f6ebd563472b}{get\-Adjacent\-Diagonal\-Tiles} (Point loc)
+\item 
+boolean \hyperlink{classmodel_1_1board_1_1_board_a95aaad7f4888e5daa665b9b92021cf38}{location\-Pressured} (int x, int y, \hyperlink{classcontroller_1_1_player}{Player} victim)
+\item 
+boolean \hyperlink{classmodel_1_1board_1_1_board_af9083ec2d9d2193bca4af526f9f8dc99}{location\-Pressured} (Point loc, \hyperlink{classcontroller_1_1_player}{Player} victim)
+\item 
+boolean \hyperlink{classmodel_1_1board_1_1_board_ae68c80c70dcf77ddcbc81fa793103c31}{is\-Valid\-Move} (\hyperlink{classmodel_1_1_chess_move}{Chess\-Move} move)
+\item 
+Array\-List$<$ \hyperlink{classmodel_1_1_chess_move}{Chess\-Move} $>$ \hyperlink{classmodel_1_1board_1_1_board_a22726970b60922a6644715ebc441bc6d}{get\-All\-Moves} (\hyperlink{classcontroller_1_1_player}{Player} player)
+\item 
+boolean \hyperlink{classmodel_1_1board_1_1_board_a8e2c1b97adc00c2b91561bed8f79017d}{no\-Possible\-Moves} (\hyperlink{classcontroller_1_1_player}{Player} victim)
+\item 
+abstract void \hyperlink{classmodel_1_1board_1_1_board_a2680e928007fbd344f4640e053861883}{render} (G\-L2 gl, \hyperlink{classmodel_1_1_chess_piece}{Chess\-Piece} selected\-Piece)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmodel_1_1board_1_1_board_a09fc48f686421ff90bf31a4491c133e9}{{\bfseries Board} (\hyperlink{interfacemodel_1_1game__modes_1_1_game_mode}{Game\-Mode} \-\_\-game\-Mode)}\label{classmodel_1_1board_1_1_board_a09fc48f686421ff90bf31a4491c133e9}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interfacemodel_1_1game__modes_1_1_game_mode}{Game\-Mode} \hyperlink{classmodel_1_1board_1_1_board_aeaec4651b92f0416e70eeeaa4959540d}{game\-Mode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract board class that is responsible for all the operations on a chess board. The board is responsible for determining if moves are valid, as well as rendering the whole scene.
+
+\begin{DoxyAuthor}{Author}
+Nicholas 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classmodel_1_1board_1_1_board_a27db942b8b62795b8e8e615c2e39b432}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!generate\-Board\-Model@{generate\-Board\-Model}}
+\index{generate\-Board\-Model@{generate\-Board\-Model}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{generate\-Board\-Model}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf Model} model.\-board.\-Board.\-generate\-Board\-Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_a27db942b8b62795b8e8e615c2e39b432}
+Generates the 3d model for the board, so that it may be added as a model to Asset\-Loader class. N\-O\-T\-E\-: this method is called automatically by the Game\-Loop during setup and should N\-E\-V\-E\-R be called again. The proper way to access this Model would be Asset\-Loader.\-get\-Instace().get\-Model(\hyperlink{classmodel_1_1board_1_1_board_a6d5675d9156c70de1c08842cea728749}{get\-Type()})
+
+\begin{DoxyReturn}{Returns}
+the generated board model 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a62edb43eeaeef48c7fd6994806bfc5a4}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a40de2efe23a2a995394e7223a5c85896}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!generate\-Tile\-Model@{generate\-Tile\-Model}}
+\index{generate\-Tile\-Model@{generate\-Tile\-Model}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{generate\-Tile\-Model}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf Model} model.\-board.\-Board.\-generate\-Tile\-Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_a40de2efe23a2a995394e7223a5c85896}
+Generates the 3d model for the board, so that it may be added as a model to Asset\-Loader class. N\-O\-T\-E\-: this method is called automatically by the Game\-Loop during setup and should N\-E\-V\-E\-R be called again. The proper way to access this Model would be Asset\-Loader.\-get\-Instace().get\-Model(\hyperlink{classmodel_1_1board_1_1_board_a6d5675d9156c70de1c08842cea728749}{get\-Type()})
+
+\begin{DoxyReturn}{Returns}
+the generated board model 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a871d89a154bd3628e00504bd91747109}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a5b3cecdde64a0a00a538fbc69e578f9c}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Adjacent\-Diagonal\-Tiles@{get\-Adjacent\-Diagonal\-Tiles}}
+\index{get\-Adjacent\-Diagonal\-Tiles@{get\-Adjacent\-Diagonal\-Tiles}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Adjacent\-Diagonal\-Tiles}]{\setlength{\rightskip}{0pt plus 5cm}abstract Array\-List$<$Point$>$ model.\-board.\-Board.\-get\-Adjacent\-Diagonal\-Tiles (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_a5b3cecdde64a0a00a538fbc69e578f9c}
+This method on a rectangular board return 4 positions (top-\/left, top-\/right, bottom-\/left, bottom-\/right) and on a hexagonal 5. This method is best thought of as all the directions a bishop would travel. N\-O\-T\-E\-: these locations may not be in bounds, and must be checked accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location x \\
+\hline
+{\em y} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of all the locations diagonal to the given location 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a43e4180539d99a0b95cf2957b4d43eb2}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a5279618349cb2950d412f6ebd563472b}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Adjacent\-Diagonal\-Tiles@{get\-Adjacent\-Diagonal\-Tiles}}
+\index{get\-Adjacent\-Diagonal\-Tiles@{get\-Adjacent\-Diagonal\-Tiles}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Adjacent\-Diagonal\-Tiles}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<$Point$>$ model.\-board.\-Board.\-get\-Adjacent\-Diagonal\-Tiles (
+\begin{DoxyParamCaption}
+\item[{Point}]{loc}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1board_1_1_board_a5279618349cb2950d412f6ebd563472b}
+Same as \hyperlink{classmodel_1_1board_1_1_board_a5b3cecdde64a0a00a538fbc69e578f9c}{get\-Adjacent\-Diagonal\-Tiles} 
+\begin{DoxyParams}{Parameters}
+{\em loc} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location point \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_1_1board_1_1_board_adae13d194d3acf1ae586162cf8ae6786}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Adjacent\-Rank\-File\-Tiles@{get\-Adjacent\-Rank\-File\-Tiles}}
+\index{get\-Adjacent\-Rank\-File\-Tiles@{get\-Adjacent\-Rank\-File\-Tiles}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Adjacent\-Rank\-File\-Tiles}]{\setlength{\rightskip}{0pt plus 5cm}abstract Array\-List$<$Point$>$ model.\-board.\-Board.\-get\-Adjacent\-Rank\-File\-Tiles (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_adae13d194d3acf1ae586162cf8ae6786}
+This method on a rectangular board return 4 positions (left, right, top, bottom) and on a hexagonal 6. This method is best thought of as all the directions a rook would travel. N\-O\-T\-E\-: these locations may not be in bounds, and must be checked accordingly
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location x \\
+\hline
+{\em y} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of all the locations adjacent to the given location 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a58a8b1a8a8505340bd2e6dd2f3268aaa}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_ac8ffc792e85b09c00923dd593368d107}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Adjacent\-Rank\-File\-Tiles@{get\-Adjacent\-Rank\-File\-Tiles}}
+\index{get\-Adjacent\-Rank\-File\-Tiles@{get\-Adjacent\-Rank\-File\-Tiles}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Adjacent\-Rank\-File\-Tiles}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<$Point$>$ model.\-board.\-Board.\-get\-Adjacent\-Rank\-File\-Tiles (
+\begin{DoxyParamCaption}
+\item[{Point}]{loc}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1board_1_1_board_ac8ffc792e85b09c00923dd593368d107}
+Same as \hyperlink{classmodel_1_1board_1_1_board_adae13d194d3acf1ae586162cf8ae6786}{get\-Adjacent\-Flat\-Tiles} 
+\begin{DoxyParams}{Parameters}
+{\em loc} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location point \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_1_1board_1_1_board_a22726970b60922a6644715ebc441bc6d}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-All\-Moves@{get\-All\-Moves}}
+\index{get\-All\-Moves@{get\-All\-Moves}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-All\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}Array\-List$<${\bf Chess\-Move}$>$ model.\-board.\-Board.\-get\-All\-Moves (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{player}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1board_1_1_board_a22726970b60922a6644715ebc441bc6d}
+Returns all the valid moves for the player, see \hyperlink{classmodel_1_1board_1_1_board_ae68c80c70dcf77ddcbc81fa793103c31}{is\-Valid\-Move} for the definition on a valid move
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of all valid moves 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1board_1_1_board_adbfd9f6c5999ef5a9705abbfadb8c924}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Board\-Position@{get\-Board\-Position}}
+\index{get\-Board\-Position@{get\-Board\-Position}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Board\-Position}]{\setlength{\rightskip}{0pt plus 5cm}abstract Point model.\-board.\-Board.\-get\-Board\-Position (
+\begin{DoxyParamCaption}
+\item[{Point2\-D.\-Float}]{render\-Point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_adbfd9f6c5999ef5a9705abbfadb8c924}
+Converts the given 3d location into a tile location, which can be used to access items on the board
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\-Point} & 3d point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tile point representation of loc 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_aba36dbe678c51dab2bf11f2735122f4a}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_ad65a4ec84fc3dad46f5b2f1e97ecc1b0}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Knight\-Moves@{get\-Knight\-Moves}}
+\index{get\-Knight\-Moves@{get\-Knight\-Moves}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Knight\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}abstract Array\-List$<$Point$>$ model.\-board.\-Board.\-get\-Knight\-Moves (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_ad65a4ec84fc3dad46f5b2f1e97ecc1b0}
+This method on a rectangular board returns 8 positions that form an L shape, and 12 positions on a hexagonal board. N\-O\-T\-E\-: these locations may not be in bounds, and must be checked accordingly
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location x \\
+\hline
+{\em y} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of all the positions a knight at (x, y) can travel on this board 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a32fbc2d65ed36077c051b05d3c305f1f}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_af75b477308f0cb632cf5e164246cd243}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Pawn\-Attacks@{get\-Pawn\-Attacks}}
+\index{get\-Pawn\-Attacks@{get\-Pawn\-Attacks}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Pawn\-Attacks}]{\setlength{\rightskip}{0pt plus 5cm}abstract Array\-List$<$Point$>$ model.\-board.\-Board.\-get\-Pawn\-Attacks (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf Pawn}}]{pawn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_af75b477308f0cb632cf5e164246cd243}
+This method on a rectangular board returns 2 positions, on a rectangular board these are the 2 diagonals in front, while on a hex board they are the top-\/left and top-\/right adjacent tiles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location x \\
+\hline
+{\em y} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of all the positions a pawn at (x, y) can attack on this board 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a0771a7158bc1c0cbd42c22c95d283f84}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a4bd4b119f6f5669aaa2aab456056cd92}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Pawn\-Moves@{get\-Pawn\-Moves}}
+\index{get\-Pawn\-Moves@{get\-Pawn\-Moves}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Pawn\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}abstract Array\-List$<$Point$>$ model.\-board.\-Board.\-get\-Pawn\-Moves (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf Pawn}}]{pawn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_a4bd4b119f6f5669aaa2aab456056cd92}
+This method on a rectangular board returns 2 positions if the pawn has not yet moved (the 2 spaces directly in from of the pawn), or 1 move if the pawn has moved The Pawn class is responsible for determining if these locations are valid (ie only one location is valid if it already moved). N\-O\-T\-E\-: these locations may not be in bounds, and must be checked accordingly
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location x \\
+\hline
+{\em y} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an array of all the positions a pawn at (x, y) can travel on this board 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a6323cde6b4f30594520205dfab7fbcba}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a2e1be001e288e4501a80844b45024a94}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Render\-Position@{get\-Render\-Position}}
+\index{get\-Render\-Position@{get\-Render\-Position}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Render\-Position}]{\setlength{\rightskip}{0pt plus 5cm}abstract Point2\-D.\-Float model.\-board.\-Board.\-get\-Render\-Position (
+\begin{DoxyParamCaption}
+\item[{Point}]{loc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_a2e1be001e288e4501a80844b45024a94}
+Converts the given tile location into 3\-D point, that is scaled to the boards size
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & tile location \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+3\-D representation of loc 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_ab566b2108e82dd874969509cbf4ade03}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a430d840f3362de265f54f815bf02893a}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Tile@{get\-Tile}}
+\index{get\-Tile@{get\-Tile}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf Chess\-Piece} model.\-board.\-Board.\-get\-Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_a430d840f3362de265f54f815bf02893a}
+Returns the piece at the given coordinates, as interpreted by the \hyperlink{classmodel_1_1board_1_1_board}{Board} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \hyperlink{classmodel_1_1_chess_piece}{Chess\-Piece} at the position, null otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a31120dd8c4e3cb47201a39333945c438}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a6d5675d9156c70de1c08842cea728749}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}abstract String model.\-board.\-Board.\-get\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_a6d5675d9156c70de1c08842cea728749}
+String used to identify the type of board. Also used as a unique model name
+
+\begin{DoxyReturn}{Returns}
+String used to identify the type of board 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_ae31cbebd45c2e8eb4c0f27a2b31ec290}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_ae6c8e172c9bb977b3be9f023736a3f80}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!has\-Enemy\-Piece@{has\-Enemy\-Piece}}
+\index{has\-Enemy\-Piece@{has\-Enemy\-Piece}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{has\-Enemy\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}abstract boolean model.\-board.\-Board.\-has\-Enemy\-Piece (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf Player}}]{attacker}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_ae6c8e172c9bb977b3be9f023736a3f80}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location x \\
+\hline
+{\em y} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location y \\
+\hline
+{\em attacker} & The player making the move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the tile at (x, y) contains a piece of the opposing player 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_addce7bd7a463bb3f279df0022ed4a46f}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a59b3e675b694301aef7e8f2cb6a1a65c}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!has\-Enemy\-Piece@{has\-Enemy\-Piece}}
+\index{has\-Enemy\-Piece@{has\-Enemy\-Piece}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{has\-Enemy\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-board.\-Board.\-has\-Enemy\-Piece (
+\begin{DoxyParamCaption}
+\item[{Point}]{loc, }
+\item[{{\bf Player}}]{attacker}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1board_1_1_board_a59b3e675b694301aef7e8f2cb6a1a65c}
+Same as \hyperlink{}{is\-Attackable} 
+\begin{DoxyParams}{Parameters}
+{\em loc} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location point \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_1_1board_1_1_board_a7c4c6d14284584b90dd969ba80bda496}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!is\-In\-Bounds@{is\-In\-Bounds}}
+\index{is\-In\-Bounds@{is\-In\-Bounds}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{is\-In\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}abstract boolean model.\-board.\-Board.\-is\-In\-Bounds (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_a7c4c6d14284584b90dd969ba80bda496}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location x \\
+\hline
+{\em y} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the given location is within the boards dimensions, false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_ac462656a89172957d6970476b4e39bf1}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a20d22db525a1d022318b86cbfcd67e16}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!is\-In\-Bounds@{is\-In\-Bounds}}
+\index{is\-In\-Bounds@{is\-In\-Bounds}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{is\-In\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-board.\-Board.\-is\-In\-Bounds (
+\begin{DoxyParamCaption}
+\item[{Point}]{loc}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1board_1_1_board_a20d22db525a1d022318b86cbfcd67e16}
+Same as \hyperlink{classmodel_1_1board_1_1_board_a7c4c6d14284584b90dd969ba80bda496}{is\-In\-Bounds} 
+\begin{DoxyParams}{Parameters}
+{\em loc} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location point \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_1_1board_1_1_board_abbfd0ab523b5a8953556ff6aad8d42c6}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!is\-Movable\-Tile@{is\-Movable\-Tile}}
+\index{is\-Movable\-Tile@{is\-Movable\-Tile}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{is\-Movable\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}abstract boolean model.\-board.\-Board.\-is\-Movable\-Tile (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf Player}}]{attacker, }
+\item[{boolean}]{can\-Capture}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_abbfd0ab523b5a8953556ff6aad8d42c6}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location x \\
+\hline
+{\em y} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location y \\
+\hline
+{\em attacker} & The player making the move \\
+\hline
+{\em can\-Capture} & If a piece is able to capture on the the tile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the space is open (ie no piece is on the tile) or if the tile contains an enemy piece, and the attacker can capture it 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a4e238edb6b8308d8b561f6418d15e594}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a1c27bff8bfe8cb594e6a576e5529b112}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!is\-Movable\-Tile@{is\-Movable\-Tile}}
+\index{is\-Movable\-Tile@{is\-Movable\-Tile}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{is\-Movable\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-board.\-Board.\-is\-Movable\-Tile (
+\begin{DoxyParamCaption}
+\item[{Point}]{loc, }
+\item[{{\bf Player}}]{player, }
+\item[{boolean}]{can\-Capture}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1board_1_1_board_a1c27bff8bfe8cb594e6a576e5529b112}
+Same as \hyperlink{classmodel_1_1board_1_1_board_abbfd0ab523b5a8953556ff6aad8d42c6}{is\-Movable\-Tile} 
+\begin{DoxyParams}{Parameters}
+{\em loc} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location point \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_1_1board_1_1_board_ae68c80c70dcf77ddcbc81fa793103c31}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!is\-Valid\-Move@{is\-Valid\-Move}}
+\index{is\-Valid\-Move@{is\-Valid\-Move}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{is\-Valid\-Move}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-board.\-Board.\-is\-Valid\-Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\-Move}}]{move}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1board_1_1_board_ae68c80c70dcf77ddcbc81fa793103c31}
+Determines if this move is valid in the context of the game mode. For example a move that puts a king in check is not valid. This method simulates the move, then asks the game\-Mode to determine if the board is in a valid state. The board is then reset to the original state and the method returns the game mode's response
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid in the context of the game\-Mode; 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1board_1_1_board_a95aaad7f4888e5daa665b9b92021cf38}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!location\-Pressured@{location\-Pressured}}
+\index{location\-Pressured@{location\-Pressured}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{location\-Pressured}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-board.\-Board.\-location\-Pressured (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf Player}}]{victim}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1board_1_1_board_a95aaad7f4888e5daa665b9b92021cf38}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location x \\
+\hline
+{\em y} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location y \\
+\hline
+{\em victim} & The player who's piece will be taken \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the victim's piece at (x, y) can be taken by any of the opponents pieces 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1board_1_1_board_af9083ec2d9d2193bca4af526f9f8dc99}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!location\-Pressured@{location\-Pressured}}
+\index{location\-Pressured@{location\-Pressured}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{location\-Pressured}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-board.\-Board.\-location\-Pressured (
+\begin{DoxyParamCaption}
+\item[{Point}]{loc, }
+\item[{{\bf Player}}]{victim}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1board_1_1_board_af9083ec2d9d2193bca4af526f9f8dc99}
+Same as \hyperlink{classmodel_1_1board_1_1_board_a95aaad7f4888e5daa665b9b92021cf38}{location\-Capturable} 
+\begin{DoxyParams}{Parameters}
+{\em loc} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location point \\
+\hline
+{\em victim} & The player who's piece will be taken \\
+\hline
+\end{DoxyParams}
+\hypertarget{classmodel_1_1board_1_1_board_a8e2c1b97adc00c2b91561bed8f79017d}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!no\-Possible\-Moves@{no\-Possible\-Moves}}
+\index{no\-Possible\-Moves@{no\-Possible\-Moves}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{no\-Possible\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}boolean model.\-board.\-Board.\-no\-Possible\-Moves (
+\begin{DoxyParamCaption}
+\item[{{\bf Player}}]{victim}
+\end{DoxyParamCaption}
+)}}\label{classmodel_1_1board_1_1_board_a8e2c1b97adc00c2b91561bed8f79017d}
+Checks to see if their are any valid moves that can be made
+
+
+\begin{DoxyParams}{Parameters}
+{\em victim} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there are any valid moves, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classmodel_1_1board_1_1_board_a2680e928007fbd344f4640e053861883}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!render@{render}}
+\index{render@{render}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}abstract void model.\-board.\-Board.\-render (
+\begin{DoxyParamCaption}
+\item[{G\-L2}]{gl, }
+\item[{{\bf Chess\-Piece}}]{selected\-Piece}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_a2680e928007fbd344f4640e053861883}
+Renders the board with the given opengl context. This methods renders the board's mesh, and all the pieces on the board, by repeated calls to Chess\-Piece.\-render(gl);
+
+
+\begin{DoxyParams}{Parameters}
+{\em gl} & \\
+\hline
+{\em selected\-Piece} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a986119cec9bbcf4699d8c82cd28ede6f}{model.\-board.\-Rectangular\-Board}.
+
+\hypertarget{classmodel_1_1board_1_1_board_a2ee2df58c449ad4251b26266a1c326d7}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!set\-Tile@{set\-Tile}}
+\index{set\-Tile@{set\-Tile}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{set\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf Chess\-Piece} model.\-board.\-Board.\-set\-Tile (
+\begin{DoxyParamCaption}
+\item[{{\bf Chess\-Piece}}]{piece, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classmodel_1_1board_1_1_board_a2ee2df58c449ad4251b26266a1c326d7}
+Sets the piece to the (x, y) position, and sets the internal board\-Location of the piece. If a piece already existed it is removed from the board, location set to (-\/1, -\/1) and returned
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & Piece to be moved \\
+\hline
+{\em x} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location x \\
+\hline
+{\em y} & \hyperlink{classmodel_1_1board_1_1_board}{Board} location y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the piece that was occupying this tile, null otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classmodel_1_1board_1_1_rectangular_board_a9a77e49749feb9211f8a70e43d12cf4d}{model.\-board.\-Rectangular\-Board}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classmodel_1_1board_1_1_board_aeaec4651b92f0416e70eeeaa4959540d}{\index{model\-::board\-::\-Board@{model\-::board\-::\-Board}!game\-Mode@{game\-Mode}}
+\index{game\-Mode@{game\-Mode}!model::board::Board@{model\-::board\-::\-Board}}
+\subsubsection[{game\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\-Mode} model.\-board.\-Board.\-game\-Mode\hspace{0.3cm}{\ttfamily [protected]}}}\label{classmodel_1_1board_1_1_board_aeaec4651b92f0416e70eeeaa4959540d}
+Reference to the game\-Mode 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/model/board/Board.\-java\end{DoxyCompactItemize}
