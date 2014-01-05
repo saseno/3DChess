@@ -11,6 +11,7 @@ Further this program was created with JOGL (http://jogamp.org/jogl/www/), which 
 I have included the Doxygen for the program, which includes detailed explanations of the classes, as well as an executable jar file which can be run. For whatever reason, if the jar file doesn't execute from double click, try from the command line using:
 java -jar [Chess3D.jar]
 
+
 Features:
 -Includes undo, redo
 -Includes basic movement animations and board rotations
@@ -19,6 +20,7 @@ Features:
 
 
 This project follows the MVC pattern as such the classes are broken up into the following packages:
+
 view:
   This package contains all the GUI components, and resource loaders required to make the application visible, such as the Frame, any menus, and the GameCamera
   
