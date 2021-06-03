@@ -2,8 +2,9 @@ package view;
 
 import java.awt.geom.Point2D;
 
-import javax.media.opengl.glu.GLU;
 import javax.vecmath.Vector3f;
+
+import com.jogamp.opengl.glu.GLU;
 
 import controller.util.Animation.Animatable;
 

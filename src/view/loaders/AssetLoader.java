@@ -10,12 +10,11 @@ import java.nio.FloatBuffer;
 import java.util.Map;
 import java.util.TreeMap;
 
-import javax.media.opengl.GL2;
-import javax.media.opengl.GLException;
-
 import view.loaders.structures.Model;
 import view.loaders.structures.Shader;
 
+import com.jogamp.opengl.GL2;
+import com.jogamp.opengl.GLException;
 import com.jogamp.opengl.util.texture.Texture;
 import com.jogamp.opengl.util.texture.TextureIO;
 

@@ -5,9 +5,10 @@ import java.util.ArrayList;
 import java.util.Stack;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import javax.media.opengl.awt.GLCanvas;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+
+import com.jogamp.opengl.awt.GLCanvas;
 
 import model.ChessMove;
 import model.board.Board;

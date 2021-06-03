@@ -1,9 +1,11 @@
 package view;
 
-import javax.media.opengl.GLCapabilities;
-import javax.media.opengl.GLProfile;
-import javax.media.opengl.awt.GLCanvas;
 import javax.swing.JFrame;
+
+import com.jogamp.opengl.GLCapabilities;
+import com.jogamp.opengl.GLEventListener;
+import com.jogamp.opengl.GLProfile;
+import com.jogamp.opengl.awt.GLCanvas;
 
 import controller.GameLoop;
 import controller.InputHandler;
@@ -51,7 +53,7 @@ public class GameFrame extends JFrame {
 		//create gameloop
     	gameController = new GameLoop(canvas, this);
     	Renderer renderer = new Renderer(gameController);
-    	canvas.addGLEventListener(renderer);
+    	canvas.addGLEventListener((GLEventListener) renderer);
     	
     	InputHandler in = new InputHandler(gameController, renderer);
 		canvas.addKeyListener(in);

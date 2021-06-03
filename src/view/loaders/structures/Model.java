@@ -2,7 +2,7 @@ package view.loaders.structures;
 
 import java.nio.FloatBuffer;
 
-import javax.media.opengl.GL2;
+import com.jogamp.opengl.GL2;
 
 import view.loaders.AssetLoader;
 

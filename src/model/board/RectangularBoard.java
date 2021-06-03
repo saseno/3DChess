@@ -7,7 +7,7 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.util.ArrayList;
 
-import javax.media.opengl.GL2;
+import com.jogamp.opengl.GL2;
 
 import model.ChessMove;
 import model.ChessPiece;

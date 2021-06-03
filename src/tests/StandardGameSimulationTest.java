@@ -2,7 +2,7 @@ package tests;
 
 import java.awt.Point;
 
-import javax.media.opengl.awt.GLCanvas;
+import com.jogamp.opengl.awt.GLCanvas;
 
 import model.ChessMove;
 import model.game_modes.StandardGame;

@@ -4,7 +4,7 @@ import java.awt.Point;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
-import javax.media.opengl.GL2;
+import com.jogamp.opengl.GL2;
 
 import model.ChessMove;
 import model.ChessPiece;
